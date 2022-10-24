@@ -1,0 +1,19 @@
+
+.auto_form_input{
+	width: 100%;
+	/* border-bottom: 1px solid #ccc; */
+	/* box-shadow: 0px 0px 5px #999999; */
+	background-color: #F0EEF5;
+}
+.auto_form_inputBox{
+	outline: none;
+	/* width: 100%; */
+	font-size: 16px;
+	font-weight: bolder;
+	border: none;
+	height: 40px;
+	text-align:left;
+	margin-left:10px;
+	line-height: 40px;
+}
+

@@ -1,0 +1,1 @@
+<view><scroll-view class="popup" scroll-y="true"><view style="height:1em;width:100%;border:none;"></view><slot name="content"></slot></scroll-view></view>

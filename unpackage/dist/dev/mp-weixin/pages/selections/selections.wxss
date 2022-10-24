@@ -1,0 +1,17 @@
+
+.select.data-v-177aa8e6 {
+	position: absolute;
+	bottom: 50%; 
+	width: 50%; 
+	left: 25%;
+	background-color: #007AFF;
+	height: 50px;
+	border-radius: 6px
+}
+.select-text.data-v-177aa8e6{
+	text-align: center;
+	line-height: 50px;
+	color: #FFFFFF;
+	font-size: 18px;
+}
+

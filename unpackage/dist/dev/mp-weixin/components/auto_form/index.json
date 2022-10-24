@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "auto-field": "/components/auto_form/item/field",
+    "auto-input": "/components/auto_form/item/input",
+    "auto-select": "/components/auto_form/item/select"
+  }
+}

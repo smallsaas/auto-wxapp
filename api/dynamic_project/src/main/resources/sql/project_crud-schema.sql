@@ -1,0 +1,3 @@
+SET FOREIGN_KEY_CHECKS=0;
+
+DROP TABLE IF EXISTS `tl_dynamic_project`; CREATE TABLE `tl_dynamic_project` (`id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键id',`ord_id` long COMMENT '组织id,用于数据隔离',`org_code` varchar(50) COMMENT '组织编号',`org_tag` varchar(50) COMMENT '组织别名',`tenant_id` long COMMENT '租户ID',`name` varchar(50) COMMENT '名称',`title` varchar(200) COMMENT '标题',`code` varchar(50) NOT NULL COMMENT '编号',`created_at` date COMMENT '创建时间',`updata_at` date COMMENT '更新时间',`user_id` long COMMENT '用户ID',`master_id` long COMMENT '一对多关联ID',`scope` varchar(50) COMMENT '用于不同业务的数据隔离',UNIQUE (`code`),PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;

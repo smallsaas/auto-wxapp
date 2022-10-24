@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['onClick']]]]}}" class="mock" bindtap="__e"></view>

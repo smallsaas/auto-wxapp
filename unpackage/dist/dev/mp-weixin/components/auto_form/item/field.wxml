@@ -1,0 +1,1 @@
+<view class="field"><block wx:if="{{item.title}}"><view class="field-title"><block wx:if="{{item.required}}"><label style="color:red;" class="_span">*</label></block>{{item.title+" :"}}</view></block><view class="field-body"><slot name="body"></slot></view></view>

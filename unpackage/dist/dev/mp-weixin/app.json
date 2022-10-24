@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/selections/selections",
+    "pages/index/index",
+    "pages/tipsPage/index",
+    "pages/pagecontents/pagecontents"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "created-dynamic-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {}
+}

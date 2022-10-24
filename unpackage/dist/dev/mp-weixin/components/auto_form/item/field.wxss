@@ -1,0 +1,29 @@
+
+.field{
+		/* background-color: #000000; */
+		/* text-align: center; */
+		position: relative;
+		left: 50%;
+		-webkit-transform: translate(-50%);
+		        transform: translate(-50%);
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+}
+.field-title{
+		font-weight: bolder;
+		/* width:7em; */
+		text-align: left;
+		margin-bottom: 5px;
+		font-size: 15px;
+/* 		position: absolute;
+		top: -50%;
+		transform: translate(0,-50%); */
+		/* height: 40px; */
+		margin-right: 5px;
+}
+.field-body{
+		flex: 1;
+		position: relative;
+}
+

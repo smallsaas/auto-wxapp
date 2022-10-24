@@ -1,0 +1,35 @@
+
+.auto_form_select_title{
+	outline: none;
+	width: 100%;
+	font-size: 18px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	/* margin: 5px 0; */
+	cursor: pointer;
+}
+.auto_form_select_title:hover{
+	background-color: #ccc8;
+	transition: all .2s ease;
+}
+.auto_form_select_Box{
+	border: 1px solid #999;
+	position: page;
+	width: 50%;
+	text-align: left;
+	list-style: none;
+	background: #fff;
+}
+.auto_form_select_item{
+	border-bottom: 1px solid #ccc;
+	display: block;
+	padding: 5px 10px;
+	text-align: left;
+	cursor: pointer;
+}
+.auto_form_select_item:hover{
+	background-color: #ccc8;
+	transition: all .2s ease;
+}
+

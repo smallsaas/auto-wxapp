@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jfeat.module.project_crud.services.domain.dao.QueryDynamicProjectDao">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <sql id="Base_Column_List">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                tl_dynamic_project.id, tl_dynamic_project.ord_id AS ordId, tl_dynamic_project.org_code AS orgCode, tl_dynamic_project.org_tag AS orgTag, tl_dynamic_project.tenant_id AS tenantId, tl_dynamic_project.name, tl_dynamic_project.title, tl_dynamic_project.code, tl_dynamic_project.created_at AS createdAt, tl_dynamic_project.updata_at AS updataAt, tl_dynamic_project.user_id AS userId, tl_dynamic_project.master_id AS masterId, tl_dynamic_project.scope
+    </sql>
+
+    
+    
+
+    <select id="queryMasterModel" resultType="DynamicProjectModel">
+       SELECT tl_dynamic_project.*
+       FROM tl_dynamic_project
+       WHERE tl_dynamic_project.id=#{id}
+       GROUP BY tl_dynamic_project.id
+    </select>
+
+
+                                                    
+    <select id="findDynamicProjectPage" resultType="DynamicProjectRecord" parameterType="DynamicProjectRecord">
+            SELECT <include refid="Base_Column_List"/>
+
+        
+
+        FROM tl_dynamic_project
+
+        
+        
+        WHERE 1=1
+        
+
+        
+                                                                            <if test="record.id != null and record.id>0 ">
+                                    AND tl_dynamic_project.id LIKE CONCAT('%',#{record.id},'%')
+                            </if>
+                                                                    
+
+                                                                                        <if test="record.ordId != null and record.ordId>0 ">
+                                    AND tl_dynamic_project.ord_id LIKE CONCAT('%',#{record.ordId},'%')
+                            </if>
+                                                                    
+
+                                                                                        <if test="record.orgCode != null and record.orgCode!= ''">
+                                    AND tl_dynamic_project.org_code LIKE CONCAT('%',#{record.orgCode},'%')
+                            </if>
+                                                                    
+
+                                                                                        <if test="record.orgTag != null and record.orgTag!= ''">
+                                    AND tl_dynamic_project.org_tag LIKE CONCAT('%',#{record.orgTag},'%')
+                            </if>
+                                                                    
+
+                                                                                        <if test="record.tenantId != null and record.tenantId>0 ">
+                                    AND tl_dynamic_project.tenant_id LIKE CONCAT('%',#{record.tenantId},'%')
+                            </if>
+                                                                    <if test="record.name != null and record.name!= ''">
+                                    AND tl_dynamic_project.name LIKE CONCAT('%',#{record.name},'%')
+                            </if>
+                                                                    <if test="record.title != null and record.title!= ''">
+                                    AND tl_dynamic_project.title LIKE CONCAT('%',#{record.title},'%')
+                            </if>
+                                                                    <if test="record.code != null and record.code!= ''">
+                                    AND tl_dynamic_project.code LIKE CONCAT('%',#{record.code},'%')
+                            </if>
+                                                                    
+
+                                                                                        <if test="record.createdAt != null and record.createdAt>0 ">
+                                    AND tl_dynamic_project.created_at LIKE CONCAT('%',#{record.createdAt},'%')
+                            </if>
+                                                                    
+
+                                                                                        <if test="record.updataAt != null and record.updataAt>0 ">
+                                    AND tl_dynamic_project.updata_at LIKE CONCAT('%',#{record.updataAt},'%')
+                            </if>
+                                                                    
+
+                                                                                        <if test="record.userId != null and record.userId>0 ">
+                                    AND tl_dynamic_project.user_id LIKE CONCAT('%',#{record.userId},'%')
+                            </if>
+                                                                    
+
+                                                                                        <if test="record.masterId != null and record.masterId>0 ">
+                                    AND tl_dynamic_project.master_id LIKE CONCAT('%',#{record.masterId},'%')
+                            </if>
+                                                                    <if test="record.scope != null and record.scope!= ''">
+                                    AND tl_dynamic_project.scope LIKE CONCAT('%',#{record.scope},'%')
+                            </if>
+        
+        <if test="startTime != null">
+            <![CDATA[AND tl_dynamic_project.start_time >= DATE(#{startTime})]]>
+        </if>
+        <if test="endTime != null">
+            <![CDATA[AND tl_dynamic_project.end_time <= DATE(#{endTime}]]>
+        </if>
+            <!--
+        <if test="search != null and search != ''">
+            OR tl_dynamic_project.name LIKE CONCAT('%',#{search},'%')
+        </if>
+        -->
+                                    </select>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jfeat.module.project_crud.services.gen.persistence.dao.DynamicProjectMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jfeat.module.project_crud.services.gen.persistence.model.DynamicProject">
+        <id column="id" property="id" />
+        <result column="ord_id" property="ordId" />
+        <result column="org_code" property="orgCode" />
+        <result column="org_tag" property="orgTag" />
+        <result column="tenant_id" property="tenantId" />
+        <result column="name" property="name" />
+        <result column="title" property="title" />
+        <result column="code" property="code" />
+        <result column="created_at" property="createdAt" />
+        <result column="updata_at" property="updataAt" />
+        <result column="user_id" property="userId" />
+        <result column="master_id" property="masterId" />
+        <result column="scope" property="scope" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, ord_id, org_code, org_tag, tenant_id, name, title, code, created_at, updata_at, user_id, master_id, scope
+    </sql>
+
+</mapper>
